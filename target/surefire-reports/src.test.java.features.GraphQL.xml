@@ -1,0 +1,10 @@
+<testsuite failures="0" name="src/test/java/features/GraphQL.feature" skipped="0" tests="1" time="1.532815">
+  <testcase classname="src.test.java.features.GraphQL" name="Retrieve Job details using GraphQL" time="1.532815">
+    <system-out>* url 'https://api.graphql.jobs/' ......................................... passed
+And request { query: '{jobs{id,title}}' } ................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And eval   for (var i=0;i&lt;response.data.length;i++) karate.match(response.data[i].title != null) . passed
+And print  "API Response is " + response .................................. passed</system-out>
+  </testcase>
+</testsuite>

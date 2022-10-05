@@ -1,0 +1,6 @@
+<testsuite failures="0" name="src/test/java/features/UIAutomation.feature" skipped="0" tests="1" time="10.189279">
+  <testcase classname="src.test.java.features.UIAutomation" name="Page Navigation" time="10.189279">
+    <system-out>Given driver 'https://sites.google.com/thoughtworks.com/vodqa-india/home' . passed
+And driver.maximize ....................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.features.POSTAPI</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">2</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2022-10-05 06:43:27 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:7]">[1:7] Create users details </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:15]">[2:15] Create users details by fetching request payload from Json File </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/features/POSTAPI.feature</span><span class="feature-description">Post API call</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:7]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">regression</a>
+</div>
+<span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">Create users details </span>
+</div>
+<div class="scenario-time passed">ms: 1174</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:7]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url 'https://reqres.in/api/'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="1">18:43:25.321 karate.env system property was:</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">Given path "/users"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">And request {"name": "Karate","job": "teacher"}</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">1163</div>
+</div>
+<div class="preformatted" data-parent="4">18:43:25.776 request:
+1 &gt; POST https://reqres.in/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 33
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+{"name":"Karate","job":"teacher"}
+
+18:43:26.547 response time in milliseconds: 769.98
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 75566a231fa58fa0-KNU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 83
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 05 Oct 2022 13:13:26 GMT
+1 &lt; Etag: W/"53-uUIIoT8T4MgApt5p8BQS3SuJAx4"
+1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wT34t86F7m0XmBWfQdtgllnSgBowb57c9M15D8l6vteqawpY0sBIaKkUDRowtORI1cXPgSMe3mJYsnrTJWnJTtX8p73VkVDWWUHuhVkeK0hd3axIuAhEpD5c7A%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"name":"Karate","job":"teacher","id":"631","createdAt":"2022-10-05T13:13:26.554Z"}</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">And match response == {"name": "Karate","job": "teacher","id": "#string","createdAt": "#ignore"}</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">And print  "API Response is " + response</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="7">18:43:26.552 [print] API Response is {"createdAt":"2022-10-05T13:13:26.554Z","name":"Karate","id":"631","job":"teacher"}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:15]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">regression</a>
+</div>
+<span class="scenario-keyword">Scenario: [2:15]</span><span class="scenario-name">Create users details by fetching request payload from Json File </span>
+</div>
+<div class="scenario-time passed">ms: 674</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2:15]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2:15]bg">
+<div class="step-container" id="8">
+<div class="step-ref bg-step">8</div>
+<div class="step-cell passed">* url 'https://reqres.in/api/'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="8">18:43:26.561 karate.env system property was:</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Given path "/users"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">And def filepath = karate.properties['user.dir'] + "/src/test/java/data/requestPayload.json"</div>
+</div>
+<div class="time-cell passed">15</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">And request read(filepath);</div>
+</div>
+<div class="time-cell passed">123</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">530</div>
+</div>
+<div class="preformatted" data-parent="12">18:43:26.703 request:
+1 &gt; POST https://reqres.in/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 33
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+{"name":"Karate","job":"teacher"}
+
+18:43:27.231 response time in milliseconds: 526.80
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 75566a2778508fac-KNU
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 83
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 05 Oct 2022 13:13:27 GMT
+1 &lt; Etag: W/"53-guC+4QhdbnN87qqgHoMcxdlL1mA"
+1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=C8LskHBbVld%2F7OkLE5dxucykkKoxEi%2B8d1HdlBOMMTcPeJ4t7r0IzV3AIXDsQf760fy3GP6mIpQfkDmzLfUUXILhgZuJzMDhbA3i9I%2FK9GObHWuY1mYt%2Fk2CLQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"name":"Karate","job":"teacher","id":"633","createdAt":"2022-10-05T13:13:27.235Z"}</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">And def filepath = karate.properties['user.dir'] + "/src/test/java/data/responsePayload.json"</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">And match response == read(filepath);</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">And print  "API Response is " + response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="16">18:43:27.237 [print] API Response is {"createdAt":"2022-10-05T13:13:27.235Z","name":"Karate","id":"633","job":"teacher"}</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<testsuite failures="0" name="src/test/java/features/UserAuthentication.feature" skipped="0" tests="1" time="1.462825">
+  <testcase classname="src.test.java.features.UserAuthentication" name="Fetch token for User details" time="1.462825">
+    <system-out>* url 'https://reqres.in/api/' ............................................ passed
+Given path "/register" .................................................... passed
+And request {"email": "eve.holt@reqres.in","password": "pistol"} .......... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* def accessToken = response.token ........................................ passed</system-out>
+  </testcase>
+</testsuite>

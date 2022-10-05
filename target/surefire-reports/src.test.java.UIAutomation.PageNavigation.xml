@@ -1,0 +1,11 @@
+<testsuite failures="1" name="src/test/java/UIAutomation/PageNavigation.feature" skipped="0" tests="1" time="15.615125">
+  <testcase classname="src.test.java.UIAutomation.PageNavigation" name="Page Navigation" time="15.615125">
+    <failure message="PageNavigation.feature:6 - evaluation (js) failed: click('a[href=&quot;/thoughtworks.com/vodqa-india/propose-your-talk&quot;]'), java.lang.RuntimeException: js eval failed twice:document.querySelector(&quot;a[href=&quot;/thoughtworks.com/vodqa-india/propose-your-talk&quot;]&quot;).click(), error: {&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;SyntaxError&quot;,&quot;description&quot;:&quot;SyntaxError: missing ) after argument list&quot;,&quot;objectId&quot;:&quot;7307092873825017775.1.3&quot;}&#10;stack trace: com.intuit.karate.driver.DevToolsDriver.eval(DevToolsDriver.java:300)">Given driver 'https://sites.google.com/thoughtworks.com/vodqa-india/home' . passed
+And click('a[href="/thoughtworks.com/vodqa-india/propose-your-talk"]') .... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PageNavigation.feature:6 - evaluation (js) failed: click('a[href="/thoughtworks.com/vodqa-india/propose-your-talk"]'), java.lang.RuntimeException: js eval failed twice:document.querySelector("a[href="/thoughtworks.com/vodqa-india/propose-your-talk"]").click(), error: {"type":"object","subtype":"error","className":"SyntaxError","description":"SyntaxError: missing ) after argument list","objectId":"7307092873825017775.1.3"}
+stack trace: com.intuit.karate.driver.DevToolsDriver.eval(DevToolsDriver.java:300)
+	at ✽.And click('a[href="/thoughtworks.com/vodqa-india/propose-your-talk"]') (PageNavigation.feature:6)</failure>
+  </testcase>
+</testsuite>

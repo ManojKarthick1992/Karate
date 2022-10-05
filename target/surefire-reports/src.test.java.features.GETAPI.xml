@@ -1,0 +1,112 @@
+<testsuite failures="0" name="src/test/java/features/GETAPI.feature" skipped="0" tests="4" time="2.93522">
+  <testcase classname="src.test.java.features.GETAPI" name="Get the details of User with header" time="1.348851">
+    <system-out>* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users/2" ..................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+And def request_headers = {Connection: 'Keep-Alive', Accept: 'application/json'} . passed
+Then headers request_headers .............................................. passed
+Then status 200 ........................................................... passed
+And print  "API Response is " + response .................................. passed
+And print  "Response status is " + responseStatus ......................... passed
+And print  "Response time is " + responseTime ............................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.features.GETAPI" name="Get the details of User with parameter and assertions in API response" time="0.634459">
+    <system-out>* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users/2" ..................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+And def request_headers = {Connection: 'Keep-Alive', Accept: 'application/json'} . passed
+Then headers request_headers .............................................. passed
+Then status 200 ........................................................... passed
+And print  "API Response is " + response .................................. passed
+And print  "Response status is " + responseStatus ......................... passed
+And print  "Response time is " + responseTime ............................. passed
+* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And param per_page = 6 .................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+Then status 200 ........................................................... passed
+And print  "API Response is " + response .................................. passed
+And print  "Response status is " + responseStatus ......................... passed
+And match  response.data[0].first_name != null ............................ passed
+And assert response.data.length == 6 ...................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.features.GETAPI" name="Get the details of User with conditional logic checks and Loops" time="0.202338">
+    <system-out>* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users/2" ..................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+And def request_headers = {Connection: 'Keep-Alive', Accept: 'application/json'} . passed
+Then headers request_headers .............................................. passed
+Then status 200 ........................................................... passed
+And print  "API Response is " + response .................................. passed
+And print  "Response status is " + responseStatus ......................... passed
+And print  "Response time is " + responseTime ............................. passed
+* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And param per_page = 6 .................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+Then status 200 ........................................................... passed
+And print  "API Response is " + response .................................. passed
+And print  "Response status is " + responseStatus ......................... passed
+And match  response.data[0].first_name != null ............................ passed
+And assert response.data.length == 6 ...................................... passed
+* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And param per_page = 6 .................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+Then status 200 ........................................................... passed
+When def firstName = [] ................................................... passed
+And eval for (var i=0;i&lt;response.data.length;i++) if (response.data.length == 6) {firstName.add(response.data[i].first_name)} else {karate.fail('Invalid response')} . passed
+And print firstName ....................................................... passed
+And match  response.data[0].first_name != null ............................ passed
+And assert response.data.length == 6 ...................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.features.GETAPI" name="Get the details of User with header Authorization token" time="0.749572">
+    <system-out>* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users/2" ..................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+And def request_headers = {Connection: 'Keep-Alive', Accept: 'application/json'} . passed
+Then headers request_headers .............................................. passed
+Then status 200 ........................................................... passed
+And print  "API Response is " + response .................................. passed
+And print  "Response status is " + responseStatus ......................... passed
+And print  "Response time is " + responseTime ............................. passed
+* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And param per_page = 6 .................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+Then status 200 ........................................................... passed
+And print  "API Response is " + response .................................. passed
+And print  "Response status is " + responseStatus ......................... passed
+And match  response.data[0].first_name != null ............................ passed
+And assert response.data.length == 6 ...................................... passed
+* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And param per_page = 6 .................................................... passed
+When method GET ........................................................... passed
+Then header Accept = 'application/json' ................................... passed
+Then status 200 ........................................................... passed
+When def firstName = [] ................................................... passed
+And eval for (var i=0;i&lt;response.data.length;i++) if (response.data.length == 6) {firstName.add(response.data[i].first_name)} else {karate.fail('Invalid response')} . passed
+And print firstName ....................................................... passed
+And match  response.data[0].first_name != null ............................ passed
+And assert response.data.length == 6 ...................................... passed
+* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users/2" ..................................................... passed
+When method GET ........................................................... passed
+And print "access token is " + accessToken ................................ passed
+And def response = call read('UserAuthentication.feature@token') .......... passed
+And print "AccessToken is:" + response.accessToken ........................ passed
+And header Authorization = 'Bearer' + response.token ...................... passed
+Then status 200 ........................................................... passed
+And print  "Response status is " + responseStatus ......................... passed
+And print  "Response time is " + responseTime ............................. passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,10 @@
+<testsuite failures="0" name="src/test/java/features/Database.feature" skipped="0" tests="1" time="0.425393">
+  <testcase classname="src.test.java.features.Database" name="Create users details" time="0.425393">
+    <system-out>Given def config = { username: 'postgres', password: 'admin', url: 'jdbc:postgresql://localhost:5432/postgres', driverClassName: 'org.postgresql.Driver' } . passed
+When def DbUtils = Java.type('org.karate.DbUtils') ........................ passed
+And def db = new DbUtils(config) .......................................... passed
+When def employee = db.readRows('select * from employee') ................. passed
+Then match employee[0].name == 'Manoj' .................................... passed
+Then print employee ....................................................... passed</system-out>
+  </testcase>
+</testsuite>

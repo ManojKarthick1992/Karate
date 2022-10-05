@@ -1,0 +1,29 @@
+<testsuite failures="0" name="src/test/java/features/POSTAPI.feature" skipped="0" tests="2" time="1.848537">
+  <testcase classname="src.test.java.features.POSTAPI" name="Create users details" time="1.174401">
+    <system-out>* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And request {"name": "Karate","job": "teacher"} ........................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == {"name": "Karate","job": "teacher","id": "#string","createdAt": "#ignore"} . passed
+And print  "API Response is " + response .................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.features.POSTAPI" name="Create users details by fetching request payload from Json File" time="0.674136">
+    <system-out>* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And request {"name": "Karate","job": "teacher"} ........................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == {"name": "Karate","job": "teacher","id": "#string","createdAt": "#ignore"} . passed
+And print  "API Response is " + response .................................. passed
+* url 'https://reqres.in/api/' ............................................ passed
+Given path "/users" ....................................................... passed
+And def filepath = karate.properties['user.dir'] + "/src/test/java/data/requestPayload.json" . passed
+And request read(filepath); ............................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And def filepath = karate.properties['user.dir'] + "/src/test/java/data/responsePayload.json" . passed
+And match response == read(filepath); ..................................... passed
+And print  "API Response is " + response .................................. passed</system-out>
+  </testcase>
+</testsuite>
